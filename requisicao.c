@@ -10,9 +10,11 @@ struct requisicao {
 
 Requisicao *cria_requisicao(char nome[], int inscricao, char procedimento[]) {
     Requisicao *requisicao = (Requisicao *) malloc(sizeof(Requisicao));
-    strcpy(requisicao->nome, nome);
-    requisicao->inscricao = inscricao;
-    strcpy(requisicao->procedimento, procedimento);
+    if (requisicao != NULL) {
+        strcpy(requisicao->nome, nome);
+        requisicao->inscricao = inscricao;
+        strcpy(requisicao->procedimento, procedimento);    
+    }
     return requisicao;
 }
 
