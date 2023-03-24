@@ -31,7 +31,7 @@ void inserir(Estrutura* estrutura, Requisicao* requisicao) {
     if (estrutura->tamanho == estrutura->capacidade) {
         estrutura->capacidade *= 2;
         Requisicao** aux = (Requisicao**) realloc(estrutura->vetor, estrutura->capacidade * sizeof(Requisicao*));
-        if (aux !=C:\Users\Usuario\Desktop\LUAN\Estudos C#\Facool\estrutura.c NULL) {
+        if (aux != NULL) {
             estrutura->vetor = aux;
         }
         else {
